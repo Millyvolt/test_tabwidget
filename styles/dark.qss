@@ -1,0 +1,96 @@
+/* Dark theme palette */
+
+QWidget {
+    background: #0f1720;
+    color: #e6edf3;
+}
+
+QMenuBar, QMenu, QStatusBar {
+    background: #0b1118;
+}
+
+QPushButton {
+    color: #e6edf3;
+    background: #111b27;
+    border: 1px solid #263241;
+}
+QPushButton:hover {
+    background: #152131;
+}
+QPushButton:pressed {
+    background: #0f1926;
+}
+
+QLineEdit, QTextEdit, QSpinBox, QDoubleSpinBox, QComboBox, QDateEdit, QTimeEdit, QDateTimeEdit, QPlainTextEdit {
+    background: #0b1118;
+    border: 1px solid #263241;
+    color: #e6edf3;
+}
+
+QGroupBox {
+    border: 1px solid #263241;
+}
+QHeaderView::section {
+    background: #0b1118;
+}
+QTableView {
+    gridline-color: #263241;
+    selection-background-color: #22486b;
+}
+
+QToolTip {
+    background: #0b1118;
+    color: #e6edf3;
+    border: 1px solid #263241;
+}
+
+/* Scrollbars */
+QScrollBar:vertical {
+    background: transparent;
+    width: 12px;
+}
+QScrollBar::handle:vertical {
+    background: #223042;
+    min-height: 24px;
+    border-radius: 6px;
+}
+QScrollBar:horizontal {
+    background: transparent;
+    height: 12px;
+}
+QScrollBar::handle:horizontal {
+    background: #223042;
+    min-width: 24px;
+    border-radius: 6px;
+}
+
+/* Tool buttons and flat buttons */
+QToolButton {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 4px 6px;
+}
+QToolButton:hover {
+    background: #152131;
+    border-color: #263241;
+}
+QToolButton:pressed, QToolButton:checked {
+    background: #0f1926;
+    border-color: #263241;
+}
+
+QPushButton[flat="true"] {
+    background: transparent;
+    border-color: transparent;
+}
+QPushButton[flat="true"]:hover {
+    background: #152131;
+    border-color: #263241;
+}
+QPushButton[flat="true"]:pressed {
+    background: #0f1926;
+    border-color: #263241;
+}
+
+

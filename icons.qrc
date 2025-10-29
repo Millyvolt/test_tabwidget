@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/light/preview.svg</file>
+        <file>icons/dark/preview.svg</file>
+    </qresource>
+</RCC>
+

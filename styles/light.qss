@@ -1,0 +1,91 @@
+/* Light theme palette */
+
+QPalette {
+    /* informational only; Qt doesn't parse these comments */
+}
+
+QWidget {
+    background: #fafafa;
+    color: #1f2328;
+}
+
+QMenuBar, QMenu {
+    background: #ffffff;
+}
+
+QStatusBar {
+    background: #ffffff;
+}
+
+/* Accents reuse common metrics but with light colors */
+QPushButton {
+    background: #ffffff;
+}
+QPushButton:hover {
+    background: #f3f4f6; /* subtle light gray */
+    border: 1px solid #cfcfcf;
+}
+QPushButton:pressed {
+    background: #e7e9ec;
+}
+QPushButton:focus {
+    border: 1px solid #377dff;
+}
+
+QToolTip {
+    background: #ffffff;
+    color: #1f2328;
+}
+
+/* Scrollbars (simple, non-overlay) */
+QScrollBar:vertical {
+    background: transparent;
+    width: 12px;
+    margin: 0;
+}
+QScrollBar::handle:vertical {
+    background: #c7c7c7;
+    min-height: 24px;
+    border-radius: 6px;
+}
+QScrollBar:horizontal {
+    background: transparent;
+    height: 12px;
+    margin: 0;
+}
+QScrollBar::handle:horizontal {
+    background: #c7c7c7;
+    min-width: 24px;
+    border-radius: 6px;
+}
+
+/* Tool buttons and flat buttons */
+QToolButton {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 4px 6px;
+}
+QToolButton:hover {
+    background: #f3f4f6;
+    border-color: #e1e1e1;
+}
+QToolButton:pressed, QToolButton:checked {
+    background: #e7e9ec;
+    border-color: #cfcfcf;
+}
+
+QPushButton[flat="true"] {
+    background: transparent;
+    border-color: transparent;
+}
+QPushButton[flat="true"]:hover {
+    background: #f3f4f6;
+    border-color: #e1e1e1;
+}
+QPushButton[flat="true"]:pressed {
+    background: #e7e9ec;
+    border-color: #cfcfcf;
+}
+
+

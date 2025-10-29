@@ -1,0 +1,10 @@
+release/main.o
+release/mainwindow.o
+release/ThemeManager.o
+release/ThemePreviewDialog.o
+release/qrc_styles.o
+release/qrc_icons.o
+release/qrc_qmake_qmake_qm_files.o
+release/moc_mainwindow.o
+release/moc_ThemeManager.o
+release/moc_ThemePreviewDialog.o

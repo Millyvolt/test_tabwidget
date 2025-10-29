@@ -1,0 +1,89 @@
+/* Common metrics and behaviors */
+
+/* Typography */
+QWidget {
+    font-family: "Segoe UI", "Roboto", "Noto Sans", sans-serif;
+    font-size: 10pt;
+}
+
+/* Buttons */
+QPushButton {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid palette(mid);
+}
+QPushButton:hover {
+    filter: none; /* keep deterministic look across platforms */
+}
+QPushButton:pressed {
+    transform: none;
+}
+QPushButton:disabled {
+    opacity: 0.6;
+}
+
+/* Primary and danger buttons identified via objectName */
+QPushButton#primary {
+    color: white;
+    background: #377dff;
+    border: 1px solid #2f6bda;
+}
+QPushButton#primary:hover {
+    background: #2f6bda;
+}
+QPushButton#danger {
+    color: white;
+    background: #e23b3b;
+    border: 1px solid #c23232;
+}
+QPushButton#danger:hover {
+    background: #c23232;
+}
+
+/* Inputs */
+QLineEdit, QTextEdit, QSpinBox, QDoubleSpinBox, QComboBox, QDateEdit, QTimeEdit, QDateTimeEdit, QPlainTextEdit {
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid palette(mid);
+}
+QLineEdit:focus, QTextEdit:focus, QSpinBox:focus, QDoubleSpinBox:focus, QComboBox:focus, QDateEdit:focus, QTimeEdit:focus, QDateTimeEdit:focus, QPlainTextEdit:focus {
+    border: 1px solid #377dff;
+    outline: none;
+}
+
+/* GroupBox */
+QGroupBox {
+    margin-top: 12px;
+    border: 1px solid palette(midlight);
+    border-radius: 8px;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 4px;
+}
+
+/* Table */
+QHeaderView::section {
+    padding: 6px 8px;
+    border: none;
+}
+QTableView {
+    gridline-color: palette(mid);
+    selection-background-color: palette(highlight);
+    selection-color: palette(highlighted-text);
+}
+
+/* Tooltips */
+QToolTip {
+    border: 1px solid palette(dark);
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+
+/* Focus outline for controls without borders */
+QCheckBox:focus::indicator, QRadioButton:focus::indicator {
+    outline: 2px solid #377dff;
+}
+
+
