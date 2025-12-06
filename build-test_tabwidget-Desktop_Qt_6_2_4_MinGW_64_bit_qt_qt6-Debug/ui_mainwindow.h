@@ -13,9 +13,9 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
+// #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QStatusBar>
+// #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QWidget>
 
@@ -34,8 +34,8 @@ public:
     QComboBox *comboBox;
     QComboBox *comboBox_2;
     QPushButton *pushButton_4;
-    QMenuBar *menubar;
-    QStatusBar *statusbar;
+    // QMenuBar *menubar;
+    // QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -72,13 +72,13 @@ public:
         pushButton_4->setGeometry(QRect(319, 150, 131, 27));
         tabWidget->addTab(tab_2, QString());
         MainWindow->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 25));
-        MainWindow->setMenuBar(menubar);
-        statusbar = new QStatusBar(MainWindow);
-        statusbar->setObjectName(QString::fromUtf8("statusbar"));
-        MainWindow->setStatusBar(statusbar);
+        // menubar = new QMenuBar(MainWindow);
+        // menubar->setObjectName(QString::fromUtf8("menubar"));
+        // menubar->setGeometry(QRect(0, 0, 800, 25));
+        // MainWindow->setMenuBar(menubar);
+        // statusbar = new QStatusBar(MainWindow);
+        // statusbar->setObjectName(QString::fromUtf8("statusbar"));
+        // MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
 

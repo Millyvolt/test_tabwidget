@@ -77,6 +77,7 @@ void ThemeManager::applyStylesheetText(const QString &qssText)
         pathsSet = true;
     }
     const bool light = (m_theme == Theme::Light) || (m_theme == Theme::Auto && isSystemLight());
+    // DarkPlus uses dark icons
     QIcon::setThemeName(light ? "light" : "dark");
 }
 
@@ -84,9 +85,14 @@ QString ThemeManager::combinedQssFor(ThemeManager::Theme theme) const
 {
     const QString common = loadQssResource(":/styles/styles/common.qss");
     const bool light = (theme == Theme::Light) || (theme == Theme::Auto && isSystemLight());
-    const QString specific = light
-        ? loadQssResource(":/styles/styles/light.qss")
-        : loadQssResource(":/styles/styles/dark.qss");
+    QString specific;
+    if (theme == Theme::DarkPlus) {
+        specific = loadQssResource(":/styles/styles/darkplus.qss");
+    } else if (light) {
+        specific = loadQssResource(":/styles/styles/light.qss");
+    } else {
+        specific = loadQssResource(":/styles/styles/dark.qss");
+    }
     return common + "\n\n" + specific;
 }
 
@@ -103,7 +109,8 @@ ThemeManager::Theme ThemeManager::loadPersistedTheme() const
     switch (stored) {
     case 0: return Theme::Light;
     case 1: return Theme::Dark;
-    case 2: default: return Theme::Auto;
+    case 2: return Theme::DarkPlus;
+    case 3: default: return Theme::Auto;
     }
 }
 

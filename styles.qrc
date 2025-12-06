@@ -3,6 +3,7 @@
         <file>styles/common.qss</file>
         <file>styles/light.qss</file>
         <file>styles/dark.qss</file>
+        <file>styles/darkplus.qss</file>
     </qresource>
 </RCC>
 

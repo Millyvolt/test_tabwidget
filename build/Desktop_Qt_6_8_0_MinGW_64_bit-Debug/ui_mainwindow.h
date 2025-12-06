@@ -10,9 +10,11 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
@@ -35,6 +37,8 @@ public:
     QComboBox *comboBox_2;
     QPushButton *pushButton_4;
     QMenuBar *menubar;
+    QMenu *menudfdf;
+    QMenu *menudfdfdf;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -74,15 +78,22 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 800, 25));
+        menubar->setGeometry(QRect(0, 0, 800, 22));
+        menudfdf = new QMenu(menubar);
+        menudfdf->setObjectName("menudfdf");
+        menudfdfdf = new QMenu(menubar);
+        menudfdfdf->setObjectName("menudfdfdf");
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
         MainWindow->setStatusBar(statusbar);
 
+        menubar->addAction(menudfdf->menuAction());
+        menubar->addAction(menudfdfdf->menuAction());
+
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -97,6 +108,8 @@ public:
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Tab 1", nullptr));
         pushButton_4->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Tab 2", nullptr));
+        menudfdf->setTitle(QCoreApplication::translate("MainWindow", "dfdf", nullptr));
+        menudfdfdf->setTitle(QCoreApplication::translate("MainWindow", "dfdfdf", nullptr));
     } // retranslateUi
 
 };

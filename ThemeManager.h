@@ -8,7 +8,7 @@ class ThemeManager : public QObject
 {
     Q_OBJECT
 public:
-    enum class Theme { Light, Dark, Auto };
+    enum class Theme { Light, Dark, DarkPlus, Auto };
     Q_ENUM(Theme)
 
     explicit ThemeManager(QObject *parent = nullptr);

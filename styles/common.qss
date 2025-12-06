@@ -13,10 +13,10 @@ QPushButton {
     border: 1px solid palette(mid);
 }
 QPushButton:hover {
-    filter: none; /* keep deterministic look across platforms */
+    /* filter: none;*/ /* keep deterministic look across platforms */
 }
 QPushButton:pressed {
-    transform: none;
+    /*transform: none;*/
 }
 QPushButton:disabled {
     opacity: 0.6;

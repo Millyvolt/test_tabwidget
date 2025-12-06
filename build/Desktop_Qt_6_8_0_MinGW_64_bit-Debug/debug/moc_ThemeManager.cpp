@@ -43,6 +43,7 @@ constexpr auto qt_meta_stringdata_CLASSThemeManagerENDCLASS = QtMocHelpers::stri
     "Theme",
     "Light",
     "Dark",
+    "DarkPlus",
     "Auto"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
@@ -70,12 +71,13 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSThemeManagerENDCLASS[] = {
     QMetaType::Void, 0x80000000 | 3,    4,
 
  // enums: name, alias, flags, count, data
-       5,    5, 0x2,    3,   28,
+       5,    5, 0x2,    4,   28,
 
  // enum data: key, value
        6, uint(ThemeManager::Theme::Light),
        7, uint(ThemeManager::Theme::Dark),
-       8, uint(ThemeManager::Theme::Auto),
+       8, uint(ThemeManager::Theme::DarkPlus),
+       9, uint(ThemeManager::Theme::Auto),
 
        0        // eod
 };

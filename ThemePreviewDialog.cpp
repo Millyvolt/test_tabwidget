@@ -73,10 +73,12 @@ ThemePreviewDialog::ThemePreviewDialog(ThemeManager *themeManager, QWidget *pare
 
     QWidget *light = buildDemoPage();
     QWidget *dark = buildDemoPage();
+    QWidget *darkPlus = buildDemoPage();
     QWidget *autoW = buildDemoPage();
 
     tabs->addTab(light, tr("Light"));
     tabs->addTab(dark, tr("Dark"));
+    tabs->addTab(darkPlus, tr("Dark+"));
     tabs->addTab(autoW, tr("Auto"));
 
     // Build per-tab styles by asking ThemeManager for combined CSS
@@ -86,6 +88,8 @@ ThemePreviewDialog::ThemePreviewDialog(ThemeManager *themeManager, QWidget *pare
     const QString lightCss = qApp->styleSheet();
     themeManager->setTheme(ThemeManager::Theme::Dark);
     const QString darkCss = qApp->styleSheet();
+    themeManager->setTheme(ThemeManager::Theme::DarkPlus);
+    const QString darkPlusCss = qApp->styleSheet();
     themeManager->setTheme(ThemeManager::Theme::Auto);
     const QString autoCss = qApp->styleSheet();
     themeManager->setTheme(original);
@@ -93,6 +97,7 @@ ThemePreviewDialog::ThemePreviewDialog(ThemeManager *themeManager, QWidget *pare
 
     light->setStyleSheet(lightCss);
     dark->setStyleSheet(darkCss);
+    darkPlus->setStyleSheet(darkPlusCss);
     autoW->setStyleSheet(autoCss);
 }
 

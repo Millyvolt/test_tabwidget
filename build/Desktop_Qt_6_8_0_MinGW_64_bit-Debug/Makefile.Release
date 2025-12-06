@@ -128,6 +128,7 @@ release/qrc_styles.cpp: ../../styles.qrc \
 		../../../../Qt/6.8.0/mingw_64/bin/rcc.exe \
 		../../styles/dark.qss \
 		../../styles/common.qss \
+		../../styles/darkplus.qss \
 		../../styles/light.qss
 	C:\Qt\6.8.0\mingw_64\bin\rcc.exe -name styles --no-zstd ..\..\styles.qrc -o release\qrc_styles.cpp
 
