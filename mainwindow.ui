@@ -121,18 +121,71 @@
    </property>
    <widget class="QMenu" name="menudfdf">
     <property name="title">
-     <string>dfdf</string>
+     <string>Файл</string>
     </property>
+    <addaction name="action_2"/>
+    <addaction name="action_3"/>
    </widget>
    <widget class="QMenu" name="menudfdfdf">
     <property name="title">
-     <string>dfdfdf</string>
+     <string>Настройки</string>
     </property>
+    <widget class="QMenu" name="menu">
+     <property name="title">
+      <string>Тема</string>
+     </property>
+     <addaction name="act_themeDarkPlus"/>
+     <addaction name="act_themeLight"/>
+     <addaction name="act_themeDark"/>
+     <addaction name="act_themeSystem"/>
+     <addaction name="act_themePreview"/>
+    </widget>
+    <addaction name="menu"/>
    </widget>
    <addaction name="menudfdf"/>
    <addaction name="menudfdfdf"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="action">
+   <property name="text">
+    <string>Файл</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>Загрузить</string>
+   </property>
+  </action>
+  <action name="act_themeLight">
+   <property name="text">
+    <string>Светлая</string>
+   </property>
+  </action>
+  <action name="act_themeDark">
+   <property name="text">
+    <string>Тёмная</string>
+   </property>
+  </action>
+  <action name="act_themeDarkPlus">
+   <property name="text">
+    <string>Тёмная +</string>
+   </property>
+  </action>
+  <action name="act_themeSystem">
+   <property name="text">
+    <string>Системная (авто)</string>
+   </property>
+  </action>
+  <action name="act_themePreview">
+   <property name="text">
+    <string>Превью тем</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

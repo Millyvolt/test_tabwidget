@@ -54,6 +54,14 @@ MainWindow::MainWindow(ThemeManager *themeManager, QWidget *parent)
     // tb->addAction(aPrev);
     // tb->addSeparator();
     // tb->addAction(aToggle);
+
+    m_themeManager->setTheme(ThemeManager::Theme::DarkPlus);
+
+    connect(ui->act_themeLight, &QAction::triggered, this, [this]{ m_themeManager->setTheme(ThemeManager::Theme::Light); });
+    connect(ui->act_themeDark, &QAction::triggered, this, [this]{ m_themeManager->setTheme(ThemeManager::Theme::Dark); });
+    connect(ui->act_themeDarkPlus, &QAction::triggered, this, [this]{ m_themeManager->setTheme(ThemeManager::Theme::DarkPlus); });
+    connect(ui->act_themeSystem, &QAction::triggered, this, [this]{ m_themeManager->setTheme(ThemeManager::Theme::Auto); });
+    connect(ui->act_themePreview, &QAction::triggered, this, [this]{ ThemePreviewDialog dlg(m_themeManager, this); dlg.exec(); });
 }
 
 MainWindow::~MainWindow()
